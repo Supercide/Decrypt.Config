@@ -5,8 +5,32 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{91D52A22-E9A3-4BBE-902A-1C89914B16DE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decrypt.Config", "src\Decrypt.Config\Decrypt.Config.csproj", "{048A36CD-B426-4DC3-BEE1-324E43098A65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{39B197E7-EB76-4A15-8CD4-7199725264ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA68C350-16B0-4EB7-8576-23158103E735}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		appveyor.yml = appveyor.yml
+		build.cake = build.cake
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{048A36CD-B426-4DC3-BEE1-324E43098A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048A36CD-B426-4DC3-BEE1-324E43098A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048A36CD-B426-4DC3-BEE1-324E43098A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048A36CD-B426-4DC3-BEE1-324E43098A65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{048A36CD-B426-4DC3-BEE1-324E43098A65} = {91D52A22-E9A3-4BBE-902A-1C89914B16DE}
 	EndGlobalSection
 EndGlobal
