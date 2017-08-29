@@ -9,7 +9,7 @@ namespace Decrypt.Config.Source
         {
             EnsureDefaults(builder);
 
-            return new RSAConfigurationProvider(this, TODO);
+            return new RSAConfigurationProvider(this, "");
         }
     }
 }

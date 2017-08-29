@@ -63,7 +63,7 @@ namespace Decrypt.Config.Source {
 
         public ICollection<TKey> Keys => _data.Keys;
 
-        public ICollection<string> Values => Enumerable.Select(_data, kvp => Decrypt(kvp.Value)).ToList<string>();
+        public ICollection<string> Values => _data.Select(kvp => Decrypt(kvp.Value)).ToList();
 
 
         public IEnumerator<KeyValuePair<TKey, string>> GetEnumerator()
@@ -98,7 +98,7 @@ namespace Decrypt.Config.Source {
         {
             int count = this._data.Count;
 
-            KeyValuePair<TKey, string>[] entries = Enumerable.ToArray(this._data);
+            KeyValuePair<TKey, string>[] entries = this._data.ToArray();
 
             for (int i = 0; i < count; ++i)
             {
@@ -113,25 +113,20 @@ namespace Decrypt.Config.Source {
 
         private string Encrypt(string value)
         {
-            CspParameters parameters = new CspParameters(1, _containerName);
+            var bytes = Encoding.UTF8.GetBytes(value);
 
-            using (RSACryptoServiceProvider rsaProvider = new RSACryptoServiceProvider(parameters))
-            {
-                var bytes = Encoding.UTF8.GetBytes(value);
+            var encryptedBytes = ProtectedData.Protect(bytes, null, DataProtectionScope.CurrentUser);
 
-                var encryptedBytes = ProtectedData.Protect(bytes, _salt, _user);
+            string data = Convert.ToBase64String(encryptedBytes);
 
-                string data = Convert.ToBase64String(encryptedBytes);
-
-                return data;
-            }
+            return data;
         }
 
         private string Decrypt(string encryptedValue)
         {
             var dataBytes = Convert.FromBase64String(encryptedValue);
 
-            byte[] data = ProtectedData.Unprotect(dataBytes, _salt, _user);
+            byte[] data = ProtectedData.Unprotect(dataBytes, null, DataProtectionScope.CurrentUser);
 
             return Encoding.UTF8.GetString(data);
         }

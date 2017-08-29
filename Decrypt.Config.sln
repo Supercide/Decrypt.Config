@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{91D52A22-E9A3-4BBE-902A-1C89914B16DE}"
 EndProject
@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		build.cake = build.cake
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decrypt.ConfigTests", "tests\Decrypt.ConfigTests\Decrypt.ConfigTests.csproj", "{6CF2EACB-4B51-485B-9814-564055CED93D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,11 +28,19 @@ Global
 		{048A36CD-B426-4DC3-BEE1-324E43098A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{048A36CD-B426-4DC3-BEE1-324E43098A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{048A36CD-B426-4DC3-BEE1-324E43098A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF2EACB-4B51-485B-9814-564055CED93D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF2EACB-4B51-485B-9814-564055CED93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF2EACB-4B51-485B-9814-564055CED93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF2EACB-4B51-485B-9814-564055CED93D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{048A36CD-B426-4DC3-BEE1-324E43098A65} = {91D52A22-E9A3-4BBE-902A-1C89914B16DE}
+		{6CF2EACB-4B51-485B-9814-564055CED93D} = {39B197E7-EB76-4A15-8CD4-7199725264ED}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79EE09F6-D99B-4033-A4FA-78B45382E495}
 	EndGlobalSection
 EndGlobal

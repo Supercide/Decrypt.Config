@@ -9,4 +9,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="System.Security" />
+  </ItemGroup>
+
 </Project>
