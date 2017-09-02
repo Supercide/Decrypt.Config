@@ -1,4 +1,3 @@
-#addin nuget:?package=Cake.Git
 #tool "nuget:?package=NUnit.ConsoleRunner"
 
 var target = Argument("target", "Default");
@@ -80,11 +79,49 @@ Task("Test")
     });
 
 ///////////////////////////////////////////////////////////////////////////////
-// TAG
+// Package
 ///////////////////////////////////////////////////////////////////////////////
 
+Task("Pack")
+    .IsDependentOn("Test")
+    .Does(() =>
+    {
+		var nuspecFiles = GetFiles("*/**/*.nuspec");
+        
+        var nuGetPackSettings = new NuGetPackSettings {
+                                    Symbols                 = false,
+                                    NoPackageAnalysis       = true,
+                                    OutputDirectory         = "./nuget",
+                                    ArgumentCustomization = args => args.Append("-Prop Configuration=" + BUILD_CONFIG)
+                                 };
+
+        foreach(var nuspecFile in nuspecFiles)
+        {
+			      var path = nuspecFile.FullPath.Split('.');
+			      path[path.Length-1] = "csproj";
+            NuGetPack(string.Join(".", path), nuGetPackSettings);
+        }
+    });
+
+Task("Push")
+    .IsDependentOn("Pack")
+    .Does(() =>
+    {
+	     if(EnvironmentVariable("NUGET_API") == null) return;
+		 // Get the path to the package.
+		 var packageFiles = GetFiles("./nuget/*.nupkg");
+
+		 foreach(var package in packageFiles)
+         {
+            // Push the package.
+            NuGetPush(package, new NuGetPushSettings {
+                Source = "https://www.nuget.org/api/v2/package",
+                ApiKey = EnvironmentVariable("NUGET_API") 
+            });
+         }
+    });
 
 Task("Default")
-    .IsDependentOn("Test");
+    .IsDependentOn("Push");
 
 RunTarget(target);

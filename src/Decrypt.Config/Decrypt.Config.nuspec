@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Jordan Anderson</authors>
+    <owners>Jordan Anderson</owners>
+    <licenseUrl>https://github.com/Supercide/Decrypt.Config/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/Supercide/Decrypt.Config</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Decryption utillity package. Helps decrypt things</description>
+    <releaseNotes>na</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>RSA Asymmetric Decryption</tags>
+  </metadata>
+</package>
