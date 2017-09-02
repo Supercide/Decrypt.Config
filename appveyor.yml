@@ -4,6 +4,8 @@ environment:
 
 skip_tags: true
 
+test: off
+
 build:
   parallel: true
   publish_nuget: true
