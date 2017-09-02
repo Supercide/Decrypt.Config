@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{91D52A22-E9A3-4BBE-902A-1C89914B16DE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decrypt.Config", "src\Decrypt.Config\Decrypt.Config.csproj", "{048A36CD-B426-4DC3-BEE1-324E43098A65}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{39B197E7-EB76-4A15-8CD4-7199725264ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA68C350-16B0-4EB7-8576-23158103E735}"
@@ -18,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decrypt.ConfigTests", "tests\Decrypt.ConfigTests\Decrypt.ConfigTests.csproj", "{6CF2EACB-4B51-485B-9814-564055CED93D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decrypt.Confige", "src\Decrypt.Confige\Decrypt.Confige.csproj", "{71758C30-A5A8-4336-B478-C217373E78F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decrypt.Config", "src\Decrypt.Config\Decrypt.Config.csproj", "{EA13D4A2-BED6-47E8-A901-514FA7240B53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,26 +24,21 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{048A36CD-B426-4DC3-BEE1-324E43098A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{048A36CD-B426-4DC3-BEE1-324E43098A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{048A36CD-B426-4DC3-BEE1-324E43098A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{048A36CD-B426-4DC3-BEE1-324E43098A65}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6CF2EACB-4B51-485B-9814-564055CED93D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6CF2EACB-4B51-485B-9814-564055CED93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CF2EACB-4B51-485B-9814-564055CED93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CF2EACB-4B51-485B-9814-564055CED93D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71758C30-A5A8-4336-B478-C217373E78F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71758C30-A5A8-4336-B478-C217373E78F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71758C30-A5A8-4336-B478-C217373E78F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71758C30-A5A8-4336-B478-C217373E78F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA13D4A2-BED6-47E8-A901-514FA7240B53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA13D4A2-BED6-47E8-A901-514FA7240B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA13D4A2-BED6-47E8-A901-514FA7240B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA13D4A2-BED6-47E8-A901-514FA7240B53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{048A36CD-B426-4DC3-BEE1-324E43098A65} = {91D52A22-E9A3-4BBE-902A-1C89914B16DE}
 		{6CF2EACB-4B51-485B-9814-564055CED93D} = {39B197E7-EB76-4A15-8CD4-7199725264ED}
-		{71758C30-A5A8-4336-B478-C217373E78F5} = {91D52A22-E9A3-4BBE-902A-1C89914B16DE}
+		{EA13D4A2-BED6-47E8-A901-514FA7240B53} = {91D52A22-E9A3-4BBE-902A-1C89914B16DE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79EE09F6-D99B-4033-A4FA-78B45382E495}

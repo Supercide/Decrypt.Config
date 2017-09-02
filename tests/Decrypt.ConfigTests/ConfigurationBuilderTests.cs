@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Decrypt.Config.ConfigurationProviders;
-using Decrypt.ConfigTests;
 using Encryption.Hybrid;
 using Encryption.Hybrid.Asymmetric;
 using Encryption.Hybrid.Hybrid;
@@ -32,7 +30,7 @@ namespace Decrypt.ConfigTests {
 
             ConfigurationBuilder builder = new ConfigurationBuilder();
 
-            builder.AddEncryptedFile(encryptedSettingsFile, encryptionContainer, signatureContainer);
+            builder.AddEncryptedFile(encryptedSettingsFile, encryptionContainer, keys.signatureKey);
 
             var root = builder.Build();
 
