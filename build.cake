@@ -71,7 +71,7 @@ Task("Test")
     .IsDependentOn("Build")
     .Does(() =>
     {
-		var testAssemblies = GetFiles(string.Format("./tests/**/bin/{0}/*Tests.dll", BUILD_CONFIG));
+		var testAssemblies = GetFiles(string.Format("./tests/**/bin/{0}/**/*Tests.dll", BUILD_CONFIG));
 
         NUnit3(testAssemblies, new NUnit3Settings {
             NoResults = false
